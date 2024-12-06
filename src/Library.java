@@ -1,14 +1,32 @@
 import java.util.ArrayList;
 
-public class Main {
+public class Library {
+
+
+    //default constructor
+   public Library() {
+
+   }
+
+
     public static void main(String[] args) {
 
+        ArrayList <Book> books = new Arraylist <String>();
+
+        books.add("")
+
+
+
+
+
+
+
         //create ArrayList object
-        ArrayList<String> books;
+       // ArrayList<String> books;
         //default constructor
 
         //need to add five different books
-        public Main(){
+      /**  public Main(){
          books.add()
         }
 
@@ -22,10 +40,11 @@ public class Main {
         //setter for books
         public void setBooks(ArrayList<String>books){
             this.books = new ArrayList<>(books);
-        }
+        }**/
 
 
 
 
-        }
-    }
+
+       }
+       }
