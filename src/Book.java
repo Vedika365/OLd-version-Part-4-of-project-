@@ -4,7 +4,7 @@ public class Book {
 
     private String title;
     private String author;
-    private String price;
+    private double  price;
     private String publisher;
     private String isbn;
 
@@ -54,12 +54,20 @@ public class Book {
                             "ISBN: " + isbn;
                 }
                 //equals to method to check equality between 2 books
-                public boolean equals(Book other){
-                        return this.title.equals(other.title)&&
-                                this.author.equals(other.author)&&
-                                this.price == other.price &&
-                                this.publisher.equals(other.publisher) &&
-                                this.isbn.equals(other.isbn);
+                public boolean equals(Book other) {
+                    if (this == other) { // Check for reference equality
+                        return true;
+                    }
+                    if (other == null) { // Null check
+                        return false;
+                    }
+                    return this.title.equals(other.title) &&
+                            this.author.equals(other.author) &&
+                            Double.compare(this.price, other.price) == 0 && // Compare double values correctly
+                            this.publisher.equals(other.publisher) &&
+                            this.isbn.equals(other.isbn);
+                }
+
 
             }
             //cone method
@@ -73,7 +81,7 @@ public class Book {
                 }
 
                 public void setTitle(String title){
-                    this.title = toTitleCase(title);
+                    this.title = title;
                 }
 
                 public String getAuthor(){
@@ -81,7 +89,7 @@ public class Book {
                 }
 
                 public void setAuthor (String author){
-                    this.author = toTitleCase(author);
+                    this.author = author;
                 }
 
                 public double getPrice(){
@@ -93,6 +101,7 @@ public class Book {
 
                 public String getPublisher(String publisher){
                     this.publisher = publisher;
+                    return publisher;
                 }
 
                 public String getIsbn(){
@@ -106,7 +115,7 @@ public class Book {
 
 
             }
-            }
+
 
 
 
