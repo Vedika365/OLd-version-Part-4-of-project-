@@ -1,7 +1,9 @@
 import static java.lang.Character.toTitleCase;
 
+
 public class Book {
 
+    Book book = new Book();
     private String title;
     private String author;
     private double  price;
@@ -10,18 +12,24 @@ public class Book {
 
     //methods
 
-    //Default constructor
+    //Default constructor    it is called direclty when object is created
     public Book(){
-
+      this.title = "Untitled";
+      this.price =0;
+      this.publisher= "not known";
+      this.isbn ="don't know";
+      this.author = "unknown";
     }
 
     //constructor with the title
     public Book(String title){
-        this.title = title;
+        this();
+        this.title = toTitleCase(title);
     }
+
     //constructor with all the data members
 
-    public Book(String title, String author, String price, String publisher, String isbn) {
+    public Book(String title, String author, double price, String publisher, String isbn) {
         this.title = title;
         this.author = author;
         this.price = price;
@@ -43,6 +51,8 @@ public class Book {
                 }
                 return false;
 
+
+
                 //method to display book details
 
                 //method to return the String conversion of the Book
@@ -53,12 +63,16 @@ public class Book {
                             "Publisher: " + publisher + "\n" +
                             "ISBN: " + isbn;
                 }
+
+
                 //equals to method to check equality between 2 books
-                public boolean equals(Book other) {
-                    if (this == other) { // Check for reference equality
+                @Override
+                public boolean equals(Object obj) {
+                    if (this == obj) { // Check for reference equality
                         return true;
+
                     }
-                    if (other == null) { // Null check
+                    if (obj == null) { // Null check
                         return false;
                     }
                     return this.title.equals(other.title) &&
@@ -72,7 +86,7 @@ public class Book {
             }
             //cone method
                 public Book clone(){
-                    return new Book()
+                    return new Book();
                 }
               //Geter and setter methods
 
