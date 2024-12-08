@@ -5,63 +5,63 @@ public class Library {
 
     //default constructor
    public Library() {
-       ArrayList<Object> book = new ArrayList<>();
-        book. add(new Book("name1", "author1", 10, "pusblisher1" ,"987-io"));
-        book.add(new Book("name2", "author2", 23, "publisher2", "dkjla678-");
-         book.add(new Book("name3", "author3", 456.8, "publisher3,", "io-90-io-89"));
-        book.add(new Book ("name4", "author4", 897, "pubisher4", "890-678-k");
+       ArrayList<Object> books = new ArrayList<>();
+        books. add(new Book("name1", "author1", 10, "pusblisher1" ,"987-io"));
+        books.add(new Book("name2", "author2", 23, "publisher2", "dkjla678-");
+         books.add(new Book("name3", "author3", 456.8, "publisher3,", "io-90-io-89"));
+        books.add(new Book ("name4", "author4", 897, "pubisher4", "890-678-k");
    }
 
-   //contructor of the list of books
+   //constructor of the list of books
     public Library (ArrayList<Book>books){
-       this.book = new ArrayList<>(books);
+       books = new ArrayList<>(books);
+    }
 
     }
     //copy constrcutor
     public Library (Library other){
-       this.books = new ArrayList<>();
-       for (int i =0; i<other.book.size(); i++){
-           Book book = other.book.get(i);
-           this.book.add(new Book(book.getTitle(), book.getAuthor(), book.getPrice(), book.getPublisher(),book.getisbn() ));
+       for (int i =0; i<other.books.size(); i++){
+           Book books = other.books.get(i);
+           books.add(new Book(books.getTitle(), books.getAuthor(), books.getPrice(), books.getPublisher(),books.getIsbn() ));
        }
     }
      //search for books containing the keyword
-   public ArrayList<Book> searchBook(String keyword){
-     ArrayList <Book> result = new ArrayList<>();
-    keyword = keyword.toLowerCase();
+   public ArrayList<Book> searchBook(String keyword) {
+       ArrayList<Book> result = new ArrayList<>();
+       keyword = keyword.toLowerCase();
 
-    //for loop ro iletrate over the books
-       for (int i=0; i<books.size();i++){
-           Book book = book.get(i);
+       //for loop ro iletrate over the books
+       for (int i = 0; i < books.size(); i++) {
+           Book book = books.get(i);
 
            //hwo to check if it contains the keyword (title, or author)
 
 
        }
-   //equals to method
+       //equals to method
        public boolean equals (Object obj ){
-           if (this ==obj ) return true;
-           if (obj == null ) return false;
+           if (this == obj) return true;
+           if (obj == null) return false;
 
            Library library = (library) obj;
            return books.equals(library.books);
        }
 
        //toString method
-       public String toString(){
-          String result = "library contains: \n"; //initilaze result with a header
+       public String toString () {
+           String result = "library contains: \n"; //initilaze result with a header
 
-       //loop to ilterate over the book list
-       for (int i=0; i< books.size(); i++){
-           Book book = books.get(i);
-           result += books.toString()= "\n";
+           //loop to ilterate over the book list
+           for (int i = 0; i < books.size(); i++) {
+               Book book = books.get(i);
+               result += books.toString() = "\n";
+
+           }
+           return result;
 
        }
-       return result;
 
-       }
-
-
+   }
 
 
 

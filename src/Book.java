@@ -1,5 +1,6 @@
 import static java.lang.Character.toTitleCase;
-
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class Book {
 
@@ -23,7 +24,6 @@ public class Book {
 
     //constructor with the title
     public Book(String title){
-        this();
         this.title = toTitleCase(title);
     }
 
@@ -53,14 +53,13 @@ public class Book {
 
 
 
-                //method to display book details
 
 
 
 
                 //equals to method to check equality between 2 books
                 @Override
-                public boolean equals(Object obj) {
+                public boolean equals( Object obj) {
                     if (this == obj) { // Check for reference equality
                         return true;
 
