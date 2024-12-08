@@ -55,14 +55,7 @@ public class Book {
 
                 //method to display book details
 
-                //method to return the String conversion of the Book
-                public String toString() {
-                    return ("Title: " + title + "\n" +
-                            "Author: " + author + "\n" +
-                            "Price: " + price + "\n" + // Formatting price if it's a number
-                            "Publisher: " + publisher + "\n" +
-                            "ISBN: " + isbn;
-                }
+
 
 
                 //equals to method to check equality between 2 books
@@ -126,6 +119,14 @@ public class Book {
                     this.isbn = isbn;
                 }
 
+    //method to return the String conversion of the Book
+    public String toString(){
+        return( "Title: " + title + "\n" +
+                "Author: " + author + "\n" +
+                "Price: " + price + "\n" +
+                "Publisher: " + publisher + "\n" +
+                "ISBN: " + isbn);
+    }
 
 
             }
