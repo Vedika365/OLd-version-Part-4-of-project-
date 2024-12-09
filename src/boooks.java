@@ -1,11 +1,12 @@
-import static java.lang.Character.toTitleCase;
-import java.util.ArrayList;
-import java.util.Objects;
+//import static java.lang.Character.toTitleCase;
+//import java.util.ArrayList;
+//import java.util.Objects;
 
-public class Book {
+//public class Book {
 
-    Book book = new Book();
-    private String title;
+   // Book Book = new Book();
+//}
+  /**  private String title;
     private String author;
     private double  price;
     private String publisher;
@@ -77,7 +78,7 @@ public class Book {
 
             }
             //cone method
-                public Book clone(){
+                public Book clone(this){
                     return new Book();
                 }
               //Geter and setter methods
@@ -129,7 +130,7 @@ public class Book {
 
 
             }
-
+**/
 
 
 

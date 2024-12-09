@@ -1,38 +1,35 @@
+//import java.awt.print.Book;
+
 import java.util.ArrayList;
 
-public class Library {
 
+public class Library {
+  Book books = new Book();
+    private ArrayList<Book> books;
 
     //default constructor
    public Library() {
-       ArrayList<Object> books = new ArrayList<>();
-        books. add(new Book("name1", "author1", 10, "pusblisher1" ,"987-io"));
-        books.add(new Book("name2", "author2", 23, "publisher2", "dkjla678-");
-         books.add(new Book("name3", "author3", 456.8, "publisher3,", "io-90-io-89"));
-        books.add(new Book ("name4", "author4", 897, "pubisher4", "890-678-k");
-   }
+       books = new ArrayList<>();
 
-   //constructor of the list of books
+
+   //constructor of the list of books(ArrayList)
     public Library (ArrayList<Book>books){
-       books = new ArrayList<>(books);
+       this.books = new ArrayList<>(books);
     }
 
-    }
+
     //copy constrcutor
     public Library (Library other){
-       for (int i =0; i<other.books.size(); i++){
-           Book books = other.books.get(i);
-           books.add(new Book(books.getTitle(), books.getAuthor(), books.getPrice(), books.getPublisher(),books.getIsbn() ));
+       this.books = new ArrayList<>(other.books);
        }
-    }
+
      //search for books containing the keyword
    public ArrayList<Book> searchBook(String keyword) {
        ArrayList<Book> result = new ArrayList<>();
-       keyword = keyword.toLowerCase();
 
        //for loop ro iletrate over the books
-       for (int i = 0; i < books.size(); i++) {
-           Book book = books.get(i);
+       Book book = books.get(i);
+       if (books.getTitle().tolowerCase().contains(keyword.toLowerCase())|| book.getAuthor().toLowerCase().contains(keyword.toLowerCase())
 
            //hwo to check if it contains the keyword (title, or author)
 
@@ -61,11 +58,8 @@ public class Library {
 
        }
 
-   }
 
-
-
-
+            //getters and setters
            public Arraylist <Book> getBooks(){
                return books;
            }
@@ -73,7 +67,12 @@ public class Library {
                this.books = books;
            }
 
+           //method to add a book to the library
+           public void addBook(Book book){
+             books.add(book);
 
+   }
+}
 
 
 
